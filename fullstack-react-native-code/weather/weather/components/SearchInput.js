@@ -1,21 +1,26 @@
 import React from 'react';
-import { Stylesheet, TextInput, View } from 'react-native';
+import { StyleSheet, TextInput, View } from 'react-native';
 
 export default class SearchInput extends React.Component {
+  handleChangeText = (newLocation) => {
+    // We need to do something with newLocation
+  }
+
   render() {
     return (
-      <View style={styles.container}
+      <View style={styles.container}>
         <TextInput
           autoCorrect={false}
           placeholder={this.props.placeholder}
           placeholderTextColor="white"
           underlineColorAndroid="transparent"
           style={styles.textInput}
-          celarButtonMode="always"
+          clearButtonMode="always"
+          onChangeText={this.handleChangeText.bind(this)}
         />
       </View>
     );
-  }
+ }
 }
 
 const styles = StyleSheet.create({
@@ -30,5 +35,5 @@ const styles = StyleSheet.create({
   textInput: {
     flex: 1,
     color: 'white',
-  }
+  },
 });
