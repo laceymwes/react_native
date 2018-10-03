@@ -26,7 +26,7 @@ export default class App extends React.Component {
       weather: '',
     };
   }
-
+// TODO: Left off at page 63. Refactor conditional rendering to more readable aproach.
   componentDidMount() {
     this.handleUpdateLocation('San Francisco');
   }
@@ -75,8 +75,23 @@ export default class App extends React.Component {
                       Could not Load weather, please try a different city.
                     </Text>
                   )}
+
+                  {!error && (
+                    <View>
+                      <Text style={[styles.largeText, styles.textStyle]}>
+                        {location}
+                      </Text>
+                      <Text style={[styles.smallText, styles.textStyle]}>
+                        {weather}
+                      </Text>
+                      <Text style={[styles.largeText, styles.textStyle]}>
+                        {'${Math.round(temperature)}'}
+                      </Text>
+                    </View>
+                  )}
                 </View>
               )}
+
             <SearchInput
               placeholder="Search any city"
               onSubmit="this.handleUpdateLocation"
