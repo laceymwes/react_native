@@ -19,14 +19,14 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loadiing: false,
+      loading: false,
       error: false,
       location: '',
       temperature: 0,
       weather: '',
     };
   }
-// TODO: Left off at page 63. Refactor conditional rendering to more readable aproach.
+
   componentDidMount() {
     this.handleUpdateLocation('San Francisco');
   }
@@ -62,7 +62,7 @@ export default class App extends React.Component {
       <KeyboardAvoidingView style={styles.container} behavior="padding">
         <StatusBar barStyle="light-content" />
         <ImageBackground
-          source={getImageForWeather('Clear')}
+          source={getImageForWeather(weather)}
           style={styles.imageContainer}
           imageStyle={styles.image}
         >
