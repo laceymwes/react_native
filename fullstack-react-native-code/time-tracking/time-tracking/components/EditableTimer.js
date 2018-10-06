@@ -1,4 +1,4 @@
-import Reach from 'react';
+import React from 'react';
 
 import TimerForm from './TimerForm';
 import Timer from './Timer';

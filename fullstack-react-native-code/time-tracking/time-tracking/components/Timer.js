@@ -1,11 +1,11 @@
-import Reac from 'react';
+import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 import { millisecondsToHuman } from '../utils/TimerUtils';
 import TimerButton from './TimerButton';
 
 export default function Timer({ title, project, elapsed }) {
-  const elapsedString = milisecondsToHuman(elapsed);
+  const elapsedString = millisecondsToHuman(elapsed);
 
   return (
     <View style={styles.timerContainer}>
@@ -24,7 +24,7 @@ export default function Timer({ title, project, elapsed }) {
 const styles = StyleSheet.create({
   timerContainer: {
     backgroundColor: 'white',
-    borderColor: 'd6d7da',
+    borderColor: '#d6d7da',
     borderWidth: 2,
     borderRadius: 10,
     padding: 15,
