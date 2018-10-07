@@ -27,7 +27,6 @@ export default class App extends React.Component {
             title="Bake squash"
             project="Kitchen Chores"
             elapsed="3890985"
-            editFormOpen
           />
         </ScrollView>
       </View>
